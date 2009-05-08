@@ -64,7 +64,7 @@ In one of your config/initializer files, add the following:
 
 (The MIT License)
 
-Copyright (c) 2009 FIX
+Copyright (c) 2009  Michael Rykov 
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
