@@ -1,0 +1,11 @@
+=== 0.1.0 / 2009-05-07
+
+* Initial release 
+  * Support for SMTP and SMTPS (over SSL)
+  * [Experimental] Untested support for Google App Engine
+  * Support for DKIM message signing
+  * Support for authentication
+
+* Coming soon
+  * Google App Engine verification
+  * Unit tests
