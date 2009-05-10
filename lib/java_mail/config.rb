@@ -1,17 +1,17 @@
 module JavaMail
   class Config
+    PROTOCOLS = [:smtp, :smtps, :gm]
+
     def initialize(settings = {})
       @settings = settings
-      @settings[:protocol] ||= :none
       
-      unless [:smtp, :smtps, :none].include?(@settings[:protocol])
-        raise JavaMailError.new("Invalid protocol #{@settings[:protocol].to_s}")
+      unless PROTOCOLS.include?(@settings[:protocol])
+        raise JavaMailError.new("Protocol #{@settings[:protocol].inspect} is not one of the supported protocols: #{PROTOCOLS.inspect}")
       end
     end
     
     def session_properties
       props = java.util.Properties.new()
-      return props if @mode == :none
       
       # We only support SMTP (plan and SSL) for now
       props.put('mail.transport.protocol', @settings[:protocol].to_s);

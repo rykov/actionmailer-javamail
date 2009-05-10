@@ -26,7 +26,7 @@ $:.unshift(File.dirname(__FILE__)) unless $:.include?(File.dirname(__FILE__)) ||
 require 'java'
 
 module JavaMail
-  VERSION = '0.1.0'
+  VERSION = '0.1.1'
 
   unless defined?(JAVAMAIL_HOME)
     JAVAMAIL_HOME = File.expand_path(File.dirname(__FILE__) + '/..')

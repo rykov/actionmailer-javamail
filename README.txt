@@ -31,7 +31,7 @@ In your config/environment.rb, add the following:
 
   config.gem "actionmailer-javamail", :lib => 'java_mail' if defined?(JRUBY_VERSION)
 
-In one of your config/initializer files, add the following:
+In one of your config/initializers files, add the following:
 
   ActionMailer::Base.delivery_method = :javamail
   ActionMailer::Base.javamail_settings = {
@@ -44,13 +44,23 @@ In one of your config/initializer files, add the following:
     :dkim      => { :domain => 'mydomain.com', :selector => 'mysel', :key_file => KEY_FILE_PATH } 
   }
 
-  :protocol  - the possible values are :smtp, :smtps, :none. (:none is used for an preconfigured JavaMail)
+  :protocol  - the possible values are :smtp, :smtps, or :gm. (:gm is the Google App Engine protocol)
   :address   - allows you to use a remote server
   :port      - currently a required option for SMTP port
   :domain    - domain to be specified in HELO command
   :user_name - user_name for server authentication
   :password  - password for server authentication
   :dkim      - (optional) arguments for DKIM signing. Key file needs to be in DER format 
+
+== GOOGLE APP ENGINE:
+
+ActionMailer-JavaMail allows to interface with the Mail API within the Google App Engine.
+Below is the simple configuration that you should place in a config/initializers file:
+
+  ActionMailer::Base.delivery_method = :javamail
+  ActionMailer::Base.javamail_settings = { :protocol => :gm }
+
+That's it!
 
 == REFERENCES:
 
