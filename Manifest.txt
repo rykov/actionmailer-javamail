@@ -2,11 +2,11 @@ History.txt
 Manifest.txt
 README.txt
 Rakefile
+ext/dkim.jar
 init.rb
 lib/action_mailer/java_mail.rb
+lib/java_mail.rb
 lib/java_mail/config.rb
 lib/java_mail/java.rb
 lib/java_mail/mailer.rb
-lib/java_mail.rb
 lib/javamail.rb
-ext/dkim.jar
