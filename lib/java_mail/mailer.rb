@@ -33,7 +33,7 @@ module JavaMail
     end
   
     def open_transport
-      @transport.connect(@config.address, @config.port.to_i, @config.user_name, @config.password)
+      @transport.connect(@config.address, (@config.port || -1).to_i, @config.user_name, @config.password)
     end
     
     def close_transport
