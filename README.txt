@@ -13,13 +13,13 @@ Action Mailer is the part of the Ruby on Rails framework that's designing email-
 
 * Support for SMTP, SMTPS
 * Support for DKIM message signing
-* [Untested] Support for using Google App Engine 
+* Support for Google App Engine 
 * [Problem] No unit tests
 
 == REQUIREMENTS:
 
 * ActionMailer 2.3.2 
-* JavaMail libraries in your CLASSPATH  
+* Recent JavaMail libraries in your CLASSPATH  
 
 == INSTALL:
 
